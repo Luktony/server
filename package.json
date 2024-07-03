@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.ts", 
+    "start": "node server.js", 
+    "build": "prisma generate && tsc", 
+    "migrate": "prisma migrate dev" ,
+    "vercel-build": "npx prisma migrate deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.2.0",
+    "@prisma/client": "^4.10.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.13.0",
+    "nodemon": "^2.0.20",
+    "prisma": "^4.10.1",
+    "prisma-erd-generator": "^1.2.5",
+    "zod": "^3.20.6"
+  }
+}
